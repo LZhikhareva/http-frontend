@@ -1,4 +1,5 @@
-import Ticket from './Ticket'; // Предполагаем, что ваш класс Ticket находится в файле ticket.js
+import Ticket from './Ticket';
+// Предполагаем, что ваш класс Ticket находится в файле ticket.js
 describe('Ticket', () => {
   it('should create a ticket with correct properties', () => {
     const ticketData = {
