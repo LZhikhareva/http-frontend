@@ -5,7 +5,7 @@
 export default class TicketService {
   async list() {
     try {
-      const response = await fetch('http://localhost:7070?method=allTickets');
+      const response = await fetch('https://http-backend-dpr8.onrender.com?method=allTickets');
       const data = await response.json();
       return data;
     } catch (error) {
@@ -16,7 +16,7 @@ export default class TicketService {
 
   async getById(id) {
     try {
-      const response = await fetch(`http://localhost:7070?method=ticketById&id=${id}`);
+      const response = await fetch(`https://http-backend-dpr8.onrender.com?method=ticketById&id=${id}`);
       const data = await response.json();
       return data;
     } catch (error) {
@@ -27,7 +27,7 @@ export default class TicketService {
 
   async create(ticket) {
     try {
-      const response = await fetch('http://localhost:7070?method=createTicket', {
+      const response = await fetch('https://http-backend-dpr8.onrender.com?method=createTicket', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ export default class TicketService {
 
   async deleteById(id) {
     try {
-      const response = await fetch(`http://localhost:7070?method=deleteById&id=${id}`, {
+      const response = await fetch(`https://http-backend-dpr8.onrender.com?method=deleteById&id=${id}`, {
         method: 'DELETE',
       });
       return response.ok;
@@ -56,7 +56,7 @@ export default class TicketService {
 
   async updateById(id, ticket) {
     try {
-      const response = await fetch(`http://localhost:7070?method=updateById&id=${id}`, {
+      const response = await fetch(`https://http-backend-dpr8.onrender.com?method=updateById&id=${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
